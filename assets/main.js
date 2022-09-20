@@ -1,5 +1,4 @@
-const URL = 'https://api.adviceslip.com/advice';
-const URL_COLOR = 'https://www.thecolorapi.com';
+const url = 'https://api.adviceslip.com/advice';
 
 window.onload = () => {
    const card = document.body.querySelector('article');
@@ -20,7 +19,7 @@ window.onload = () => {
       try {
          card.classList.remove('zoom');
 
-         const res = await axios.get(URL);
+         const res = await axios.get(url);
          let adviceSlip = res.data.slip;
          
          adviceId.innerText = adviceSlip.id;
